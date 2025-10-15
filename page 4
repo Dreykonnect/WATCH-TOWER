@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Watch Tower - Verification</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            line-height: 1.6;
+        }
+        header {
+            background-color: #b30000;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+        }
+        header p {
+            margin-top: 5px;
+            font-size: 1.1rem;
+        }
+        nav {
+            background-color: #800000;
+            color: white;
+            display: flex;
+            justify-content: center;
+            padding: 10px;
+            gap: 15px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        section {
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+        h2 {
+            color: #800000;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        .form-group input,
+        .form-group button {
+            width: 100%;
+            padding: 15px;
+            font-size: 1.2rem;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .form-group button {
+            background-color: #b30000;
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+        .form-group button:hover {
+            background-color: #800000;
+        }
+        footer {
+            text-align: center;
+            background: #b30000;
+            color: white;
+            padding: 15px 0;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to Watch Tower</h1>
+        <p>Verify your account to proceed</p>
+    </header>
+    <nav>
+        <a href="http://127.0.0.1:3000/1w">Home</a>
+        <a href="http://127.0.0.1:3000/verification">Verification</a>
+        <a href="http://127.0.0.1:3000/1w">About</a>
+        <a href="http://127.0.0.1:3000/1w">Our Goals</a>
+        <a href="#report">Report Issue</a>
+    </nav>
+    <main>
+        <section id="verification" class="container">
+            <h2>Verify Yourself</h2>
+            <form action="/submit-verification" method="POST">
+                <div class="form-group">
+                    <label for="email">Enter Your Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                </div>
+
+                <div class="form-group">
+                    <button type="submit">Send Verification Code</button>
+                </div>
+
+                <div class="form-group">
+                    <label for="verificationCode">Enter Verification Code</label>
+                    <input type="text" id="verificationCode" name="verificationCode" placeholder="Enter code sent to your email" required>
+                </div>
+
+                <div class="form-group">
+                    <button type="submit">Submit</button>
+                </div>
+            </form>
+        </section>
+
+        <div style="text-align: center;">
+            <a href="http://127.0.0.1:3000/1w">
+                <button>Back to Home</button>
+            </a>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 Watch Tower. All rights reserved.</p>
+    </footer>
+</body>
+</html>
