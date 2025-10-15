@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Watch Tower - Report & Contact</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            line-height: 1.6;
+        }
+        header {
+            background-color: #b30000;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+        }
+        header p {
+            margin-top: 5px;
+            font-size: 1.1rem;
+        }
+        nav {
+            background-color: #800000;
+            color: white;
+            display: flex;
+            justify-content: center;
+            padding: 10px;
+            gap: 15px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        section {
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+        h2 {
+            color: #800000;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        .form-group input,
+        .form-group select,
+        .form-group textarea,
+        .form-group button {
+            width: 100%;
+            padding: 15px;
+            font-size: 1.2rem;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .form-group textarea {
+            height: 150px;
+        }
+        .form-group button {
+            background-color: #b30000;
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+        .form-group button:hover {
+            background-color: #800000;
+        }
+        footer {
+            text-align: center;
+            background: #b30000;
+            color: white;
+            padding: 15px 0;
+            margin-top: 20px;
+        }
+        .map-container {
+            margin-top: 20px;
+            height: 400px;
+            width: 100%;
+            background-color: #eaeaea;
+        }
+        .location-submit-btn {
+            width: auto;
+            background-color: #b30000;
+            color: white;
+            font-size: 1.2rem;
+            cursor: pointer;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+        }
+        .location-submit-btn:hover {
+            background-color: #800000;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to Watch Tower</h1>
+        <p>Report and track faulty streetlights in Sunderland</p>
+    </header>
+    <nav>
+        <a href="http://127.0.0.1:3000/1w">Home</a>
+        <a href="#contact">Contact</a>
+        <a href="http://127.0.0.1:3000/1w">About</a>
+        <a href="http://127.0.0.1:3000/1w">Our Goals</a>
+        <a href="#report">Report Issue</a>
+    </nav>
+    <main>
+        <section id="report" class="container">
+            <h2>Report a Faulty Streetlight</h2>
+            <!-- Map Section Above Location Input -->
+            <div class="map-container">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d73421.28818599993!2d-1.48848180489204!3d54.8956334244132!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487e612d8af0739f%3A0x749d6e7d017f03c3!2sSunderland!5e0!3m2!1sen!2suk!4v1733455853585!5m2!1sen!2suk" width="800" height="433" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>" 
+                    width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0">
+            </iframe>
+            </div>
+
+            <!-- Location Form -->
+            <form id="reportForm">
+                <div class="form-group">
+                    <label for="location">Location (Address or GPS Coordinates)</label>
+                    <input type="text" id="location" name="location" placeholder="Enter location or postcode" required>
+                </div>
+
+                <!-- Location Submit Button -->
+                <div class="form-group">
+                    <button type="submit" class="location-submit-btn">Submit Location</button>
+                </div>
+
+                <!-- Dropdown to Select Issue Type -->
+                <div class="form-group">
+                    <label for="issueType">Select Issue Type</label>
+                    <select id="issueType" name="issueType" required>
+                        <option value="">Select an Issue</option>
+                        <option value="broken_glass">Broken Glass</option>
+                        <option value="faulty_wires">Faulty Wires</option>
+                        <option value="bad_lights">Bad Lights</option>
+                        <option value="broken_poles">Broken Poles</option>
+                        <option value="others">Others</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="description">Issue Description</label>
+                    <textarea id="description" name="description" rows="5" placeholder="Describe the issue..." required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="photo">Upload Photo (optional)</label>
+                    <input type="file" id="photo" name="photo" accept="image/*">
+                </div>
+                <div class="form-group">
+                    <button type="submit">Submit Report</button>
+                </div>
+            </form>
+        </section>
+
+        <section id="contact" class="container">
+            <h2>Contact Us</h2>
+            <p>If you have any questions or need assistance, feel free to reach out:</p>
+            <ul>
+                <li>Email: <a href="mailto:support@watchtower.com">support@watchtower.com</a></li>
+                <li>Phone: +44 123 456 7890</li>
+                <li>Address: Sunderland City Council, 123 Main Street, Sunderland</li>
+            </ul>
+        </section>
+
+        <div style="text-align: center;">
+            <a href="http://127.0.0.1:3000/1w">
+                <button>Back to Home</button>
+                <a/>
+
+        
+            <a href="http://127.0.0.1:3000/3w"><button>Next</button>   
+
+            </a>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 Watch Tower. All rights reserved.</p>
+    </footer>
+</body>
+</html>
