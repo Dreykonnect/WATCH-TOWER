@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Watch Tower - View My Reports</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            line-height: 1.6;
+        }
+        header {
+            background-color: #b30000;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+        }
+        header p {
+            margin-top: 5px;
+            font-size: 1.1rem;
+        }
+        nav {
+            background-color: #800000;
+            color: white;
+            display: flex;
+            justify-content: center;
+            padding: 10px;
+            gap: 15px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        section {
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+        h2 {
+            color: #800000;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        .form-group select,
+        .form-group button {
+            width: 100%;
+            padding: 15px;
+            font-size: 1.2rem;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .form-group button {
+            background-color: #b30000;
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+        .form-group button:hover {
+            background-color: #800000;
+        }
+        footer {
+            text-align: center;
+            background: #b30000;
+            color: white;
+            padding: 15px 0;
+            margin-top: 20px;
+        }
+        .reports-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        .reports-table th,
+        .reports-table td {
+            padding: 10px;
+            border: 1px solid #ccc;
+            text-align: left;
+        }
+        .reports-table th {
+            background-color: #800000;
+            color: white;
+        }
+        .reports-table tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to Watch Tower</h1>
+        <p>View your submitted reports</p>
+    </header>
+    <nav>
+        <a href="http://127.0.0.1:3000/1w">Home</a>
+        <a href="#viewReports">View My Reports</a>
+        <a href="http://127.0.0.1:3000/1w">About</a>
+        <a href="http://127.0.0.1:3000/1w">Our Goals</a>
+        <a href="#report">Report Issue</a>
+    </nav>
+    <main>
+        <section id="viewReports" class="container">
+            <h2>View My Reports</h2>
+            
+            <!-- Dropdown to Filter Reports -->
+            <div class="form-group">
+                <label for="reportFilter">Filter Reports</label>
+                <select id="reportFilter" name="reportFilter">
+                    <option value="">Select Filter</option>
+                    <option value="all">All Reports</option>
+                    <option value="broken_glass">Broken Glass</option>
+                    <option value="faulty_wires">Faulty Wires</option>
+                    <option value="bad_lights">Bad Lights</option>
+                    <option value="broken_poles">Broken Poles</option>
+                    <option value="others">Others</option>
+                </select>
+            </div>
+
+            <!-- Table of Submitted Reports -->
+            <table class="reports-table">
+                <thead>
+                    <tr>
+                        <th>Location</th>
+                        <th>Issue Type</th>
+                        <th>Description</th>
+                        <th>Status</th>
+                        <th>Date Submitted</th>
+                    </tr>
+                </thead>
+                <tbody id="reportsTableBody">
+                    <!-- Example row, you would fill this in manually or dynamically through the backend -->
+                    <tr>
+                        <td>Sunderland - Main Street</td>
+                        <td>Broken Glass</td>
+                        <td>Broken glass near the streetlight</td>
+                        <td>In Progress</td>
+                        <td>2024-12-05</td>
+                    </tr>
+                    <tr>
+                        <td>Sunderland - Park Avenue</td>
+                        <td>Bad Lights</td>
+                        <td>Streetlight not turning on</td>
+                        <td>Completed</td>
+                        <td>2024-12-04</td>
+                    </tr>
+                    <tr>
+                        <td>Sunderland - Green Road</td>
+                        <td>Faulty Wires</td>
+                        <td>Exposed wires on the pole</td>
+                        <td>Pending</td>
+                        <td>2024-12-03</td>
+                    </tr>
+                    <tr>
+                        <td>Sunderland - High Street</td>
+                        <td>Broken Poles</td>
+                        <td>Streetlight pole is broken</td>
+                        <td>In Progress</td>
+                        <td>2024-12-02</td>
+                    </tr>
+                    <!-- Add more rows as needed -->
+                </tbody>
+            </table>
+        </section>
+
+        <div style="text-align: center;">
+            <a href="http://127.0.0.1:3000/1w">
+            </a>
+                <button>Back to Home</button>
+                <a href="http://127.0.0.1:3000/4w"><button> Next</button>
+
+                </a>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 Watch Tower. All rights reserved.</p>
+    </footer>
+</body>
+</html>
