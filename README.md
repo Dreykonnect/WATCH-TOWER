@@ -64,3 +64,147 @@ REACT_APP_MAP_API_KEY=your_map_api_key
 bash
 Copy code
 npm start
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Watch Tower - About & Our Goals</title>
+    <style>
+        /* Similar styles as before */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            line-height: 1.6;
+        }
+        header {
+            background-color: #b30000;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+        }
+        header p {
+            margin-top: 5px;
+            font-size: 1.1rem;
+        }
+        nav {
+            background-color: #800000;
+            color: white;
+            display: flex;
+            justify-content: center;
+            padding: 10px;
+            gap: 15px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        section {
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+        h2 {
+            color: #800000;
+        }
+        footer {
+            text-align: center;
+            background: #b30000;
+            color: white;
+            padding: 15px 0;
+            margin-top: 20px;
+        }
+        .logo {
+            img {
+                width: 50px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="logo">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/LEGO_logo.svg/1024px-LEGO_logo.svg.png" alt="logo" />
+    </div>
+    <header>
+        <h1>Welcome to Watch Tower</h1>
+        <p>Report and track faulty streetlights in Sunderland</p>
+    </header>
+    <nav>
+        <a href="http://127.0.0.1:3000/1w">Home</a>
+        <a href="#contact">Contact</a>
+        <a href="http://127.0.0.1:3000/1w">About</a>
+        <a href="#goals">Our Goals</a>
+        <a href="http://127.0.0.1:3000/2w">Report Issue</a>
+        <a href="https://www.sunderland.gov.uk/">City Council</a>
+
+    </nav>
+    <main>
+        <section id="about" class="container">
+            <h2>About Watch Tower</h2>
+            <p>Watch Tower is a dedicated platform for citizens of Sunderland to report broken or faulty streetlights. By empowering individuals to report issues, we aim to improve street visibility and safety for everyone in our community.</p>
+        </section>
+        <section id="goals" class="container">
+            <h2>Our Goals</h2>
+            <p>At Watch Tower, our goals are divided into three main categories:</p>
+            <h3>Preventing</h3>
+            <p>We aim to proactively identify potential issues before they become major problems. This includes regular maintenance and awareness campaigns to prevent streetlight failures.</p>
+            <h3>Reporting</h3>
+            <p>We encourage community members to report faulty streetlights through our platform, ensuring that issues are reported quickly and accurately for timely resolution.</p>
+            <h3>Responding</h3>
+            <p>We prioritize quick responses to reports, ensuring that streetlight issues are addressed and resolved promptly, improving safety and visibility across Sunderland.</p>
+        </section>
+        <section id="contact" class="container">
+            <h2>Contact Us</h2>
+            <p>If you have any questions, concerns, or need assistance, feel free to contact us:</p>
+            <ul>
+                <li>Email: <a href="mailto:support@watchtower.com">support@watchtower.com</a></li>
+                <li>Phone: +44 123 456 7890</li>
+                <li>Address: Sunderland City Council, 123 Main Street, Sunderland</li>
+            </ul>
+        </section>
+        <section id="emergency" class="container">
+            <h2>Emergency Contacts (UK)</h2>
+            <p>If you're in need of immediate help, here are the key emergency contacts in the UK:</p>
+            <ul>
+                <li><strong>Emergency Services (Police, Fire, Ambulance):</strong> <a href="tel:999">999</a></li>
+                <li><strong>Non-Emergency Police:</strong> <a href="tel:101">101</a></li>
+                <li><strong>British Transport Police:</strong> <a href="tel:61016">61016</a></li>
+                <li><strong>National Health Service (NHS) Direct:</strong> <a href="tel:111">111</a></li>
+                <li><strong>National Gas Emergency Service:</strong> <a href="tel:0800111999">0800 111 999</a></li>
+                <li><strong>National Power Cut Helpline:</strong> <a href="tel:105">105</a></li>
+                <li><strong>Flooding (Environment Agency):</strong> <a href="tel:0345 988 1188">0345 988 1188</a></li>
+            </ul>
+        </section>
+        <div style="text-align: center;">
+            <a href="http://127.0.0.1:3000/2w"><button>Next</button></a>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 Watch Tower. All rights reserved.</p>
+    </footer>
+</body>
+</html>
+
