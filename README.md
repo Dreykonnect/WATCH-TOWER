@@ -4,7 +4,7 @@
 
 ---
 
-## 🌟 Features
+ Features
 
 - **Report a Streetlight:** Submit issues with location (GPS), description, and optional photos.  
 - **Track Status:** View the status of submitted reports (reported, in-progress, resolved).  
@@ -14,197 +14,98 @@
 
 ---
 
-## 🛠️ Tech Stack
+# Watch Tower – Sunderland Streetlight Reporting 🌃💡
 
-- **Frontend:** React + TypeScript  
-- **Styling:** Tailwind CSS  
-- **Maps:** Leaflet.js or Google Maps API  
-- **Forms & Validation:** React Hook Form / Zod  
-- **Notifications:** Email integration (SendGrid)  
-- **Deployment:** Vercel / Netlify  
+**Watch Tower** is a static website that allows citizens of Sunderland to **report and track faulty streetlights**. The platform aims to improve street visibility, enhance safety, and empower residents to actively participate in maintaining their community infrastructure.
 
 ---
 
-## 📦 Project Structure
+ Features
+
+- **About Section:** Learn about Watch Tower and its purpose.  
+- **Our Goals:** Clear breakdown of the platform’s goals — Preventing, Reporting, and Responding.  
+- **Contact Information:** Email, phone, and address for inquiries.  
+- **Emergency Contacts:** Key UK emergency services and hotlines for residents.  
+- **Navigation:** Easy-to-use navigation bar with links to all sections and external resources.  
+- **Next Button:** Directs users to the report submission page.  
+- **Responsive Design:** Works well on desktop and mobile devices.  
+
+---
+
+ Tech Stack
+
+- **Frontend:** HTML5, CSS3  
+- **Styling:** Embedded CSS (lightweight and responsive)  
+- **Deployment:** Can be hosted on GitHub Pages, Netlify, Vercel, or any static hosting platform.  
+- **Map Integration (optional):** Leaflet.js or Google Maps API can be added for reporting locations.  
+
+---
+
+ Project Structure
 
 watch-tower-website/
-├─ public/ # Static assets (images, favicon, etc.)
-├─ src/
-│ ├─ components/ # Reusable UI components
-│ ├─ pages/ # React pages (Home, Report, Dashboard)
-│ ├─ services/ # API calls
-│ ├─ styles/ # Global CSS/Tailwind overrides
-│ └─ App.tsx # Main React app
-├─ package.json
-└─ README.md
+├─ index.html # Main website page (About, Goals, Contact, Emergency)
+├─ style.css # Optional external stylesheet (if separated from HTML)
+├─ assets/ # Images, logos, or other static files
+└─ README.md # Project information and setup guide
 
 yaml
 Copy code
 
 ---
 
-## ⚡ Getting Started
+## ⚡ How to Run Locally
 
-### 1. Clone the repository
+1. **Clone the repository**:
 ```bash
 git clone https://github.com/yourusername/watch-tower-website.git
 cd watch-tower-website
-2. Install dependencies
+Open the website in a browser:
+
+Simply double-click index.html or
+
+Run a local server using Python:
+
 bash
 Copy code
-npm install
-3. Configure environment variables
-Create a .env file at the root:
+# Python 3
+python -m http.server 8000
+Then visit http://localhost:8000
 
-env
-Copy code
-REACT_APP_API_URL=https://api.watchtower-sunderland.com
-REACT_APP_MAP_API_KEY=your_map_api_key
-4. Run the website locally
-bash
-Copy code
-npm start
+ Customization
+Update the logo by replacing the <img> tag in .logo.
 
+Update contact info or emergency contacts in the HTML.
 
+Modify styles in the <style> section or move to an external CSS file for maintainability.
 
+Update navigation links to point to actual deployed pages or reporting forms.
 
+ Deployment
+You can host this static site using any of these platforms:
 
+GitHub Pages: Push to the main branch and enable Pages.
 
+Netlify: Drag-and-drop the project folder or connect GitHub repository.
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Watch Tower - About & Our Goals</title>
-    <style>
-        /* Similar styles as before */
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-            line-height: 1.6;
-        }
-        header {
-            background-color: #b30000;
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
-        header h1 {
-            margin: 0;
-        }
-        header p {
-            margin-top: 5px;
-            font-size: 1.1rem;
-        }
-        nav {
-            background-color: #800000;
-            color: white;
-            display: flex;
-            justify-content: center;
-            padding: 10px;
-            gap: 15px;
-        }
-        nav a {
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        nav a:hover {
-            text-decoration: underline;
-        }
-        section {
-            padding: 20px;
-        }
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            background: white;
-            padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            margin-bottom: 20px;
-        }
-        h2 {
-            color: #800000;
-        }
-        footer {
-            text-align: center;
-            background: #b30000;
-            color: white;
-            padding: 15px 0;
-            margin-top: 20px;
-        }
-        .logo {
-            img {
-                width: 50px;
-            }
-        }
-    </style>
-</head>
-<body>
-    <div class="logo">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/LEGO_logo.svg/1024px-LEGO_logo.svg.png" alt="logo" />
-    </div>
-    <header>
-        <h1>Welcome to Watch Tower</h1>
-        <p>Report and track faulty streetlights in Sunderland</p>
-    </header>
-    <nav>
-        <a href="http://127.0.0.1:3000/1w">Home</a>
-        <a href="#contact">Contact</a>
-        <a href="http://127.0.0.1:3000/1w">About</a>
-        <a href="#goals">Our Goals</a>
-        <a href="http://127.0.0.1:3000/2w">Report Issue</a>
-        <a href="https://www.sunderland.gov.uk/">City Council</a>
+Vercel: Deploy static sites directly from GitHub repository.
 
-    </nav>
-    <main>
-        <section id="about" class="container">
-            <h2>About Watch Tower</h2>
-            <p>Watch Tower is a dedicated platform for citizens of Sunderland to report broken or faulty streetlights. By empowering individuals to report issues, we aim to improve street visibility and safety for everyone in our community.</p>
-        </section>
-        <section id="goals" class="container">
-            <h2>Our Goals</h2>
-            <p>At Watch Tower, our goals are divided into three main categories:</p>
-            <h3>Preventing</h3>
-            <p>We aim to proactively identify potential issues before they become major problems. This includes regular maintenance and awareness campaigns to prevent streetlight failures.</p>
-            <h3>Reporting</h3>
-            <p>We encourage community members to report faulty streetlights through our platform, ensuring that issues are reported quickly and accurately for timely resolution.</p>
-            <h3>Responding</h3>
-            <p>We prioritize quick responses to reports, ensuring that streetlight issues are addressed and resolved promptly, improving safety and visibility across Sunderland.</p>
-        </section>
-        <section id="contact" class="container">
-            <h2>Contact Us</h2>
-            <p>If you have any questions, concerns, or need assistance, feel free to contact us:</p>
-            <ul>
-                <li>Email: <a href="mailto:support@watchtower.com">support@watchtower.com</a></li>
-                <li>Phone: +44 123 456 7890</li>
-                <li>Address: Sunderland City Council, 123 Main Street, Sunderland</li>
-            </ul>
-        </section>
-        <section id="emergency" class="container">
-            <h2>Emergency Contacts (UK)</h2>
-            <p>If you're in need of immediate help, here are the key emergency contacts in the UK:</p>
-            <ul>
-                <li><strong>Emergency Services (Police, Fire, Ambulance):</strong> <a href="tel:999">999</a></li>
-                <li><strong>Non-Emergency Police:</strong> <a href="tel:101">101</a></li>
-                <li><strong>British Transport Police:</strong> <a href="tel:61016">61016</a></li>
-                <li><strong>National Health Service (NHS) Direct:</strong> <a href="tel:111">111</a></li>
-                <li><strong>National Gas Emergency Service:</strong> <a href="tel:0800111999">0800 111 999</a></li>
-                <li><strong>National Power Cut Helpline:</strong> <a href="tel:105">105</a></li>
-                <li><strong>Flooding (Environment Agency):</strong> <a href="tel:0345 988 1188">0345 988 1188</a></li>
-            </ul>
-        </section>
-        <div style="text-align: center;">
-            <a href="http://127.0.0.1:3000/2w"><button>Next</button></a>
-        </div>
-    </main>
-    <footer>
-        <p>&copy; 2024 Watch Tower. All rights reserved.</p>
-    </footer>
-</body>
-</html>
+ Contributing
+Contributions are welcome! Suggestions for design improvements, accessibility, or new features can be submitted via:
+
+Fork the project
+
+Create a new branch: git checkout -b feature/YourFeature
+
+Make your changes and commit: git commit -m "Add YourFeature"
+
+Push to your branch: git push origin feature/YourFeature
+
+Open a Pull Request
+
+ Contact
+Andrew Osarobo Osayagbon – LinkedIn
+Email: support@watchtower.com
+
+Project Website: Watch Tower (replace with live URL when deploye
 
